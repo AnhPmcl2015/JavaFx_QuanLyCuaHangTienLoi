@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HoaDonController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Hóa đơn">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="529.0" prefWidth="980.0">
+         <children>
+            <TableView fx:id="tvHoaDon" nodeOrientation="LEFT_TO_RIGHT" prefHeight="495.0" prefWidth="700.0">
+              <columns>
+                <TableColumn fx:id="tcMaSp" prefWidth="77.0" text="Mã SP" />
+                <TableColumn fx:id="tcTenSp" prefWidth="218.0" text="Tên SP" />
+                  <TableColumn fx:id="tcSoLuong" minWidth="0.0" prefWidth="65.0" text="Số lượng" />
+                  <TableColumn fx:id="tcDonGia" minWidth="0.0" prefWidth="106.0" text="Đơn giá" />
+                  <TableColumn fx:id="tcDonViTinh" minWidth="0.0" prefWidth="99.0" text="Đơn vị tính" />
+                  <TableColumn fx:id="tcThanhTien" prefWidth="134.0" text="Thành tiền" />
+              </columns>
+            </TableView>
+            <VBox prefHeight="495.0" prefWidth="281.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="79.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="182.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã SP:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtMaSP" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtSoLuong" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng cộng:">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="261.0" spacing="25.0">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text fx:id="txtTongCong" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="25.000">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="VND">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnDongY" mnemonicParsing="false" text="Xuất hóa đơn">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

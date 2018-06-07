@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus.PayBillController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập hàng">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="489.0" prefWidth="980.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="472.0" prefWidth="366.0" spacing="15.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="115.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="208.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhập hàng:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã đơn hàng:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtMaNhapHang" editable="false" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtMaDonHang" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tvDsNhapHang" prefHeight="383.0" prefWidth="294.0">
+                    <columns>
+                      <TableColumn fx:id="tcMaSpDatHang" prefWidth="65.0" text="Mã SP" />
+                      <TableColumn fx:id="tcTenSpDatHang" prefWidth="216.0" text="Tên SP" />
+                        <TableColumn fx:id="tcSoLuongDatHang" prefWidth="84.0" text="Số lượng" />
+                    </columns>
+                  </TableView>
+               </children>
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fx:id="imgMuiTen" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/arrow_right.png" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <VBox prefHeight="472.0" prefWidth="548.0" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0" spacing="15.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhà cung cấp:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="txtTenNhaCC" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Công ty Hảo Hảo">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvNhapHang" prefHeight="420.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="tcMaSpNhapHang" prefWidth="102.0" text="Mã SP" />
+                      <TableColumn fx:id="tcTenSpNhapHang" prefWidth="237.0" text="Tên SP" />
+                        <TableColumn fx:id="tcSoLuongNhapHang" prefWidth="87.0" text="Số lượng" />
+                        <TableColumn fx:id="tcNgayHetHanNhapHang" prefWidth="121.0" text="Ngày hết hạn" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="980.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnHuy" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Hủy">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDongY" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Đồng ý">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

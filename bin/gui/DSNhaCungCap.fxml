@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DSNhaCungCapController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách nhà cung cấp">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TitledPane collapsible="false" prefHeight="67.0" prefWidth="980.0" text="Tìm kiếm" wrapText="true">
+         <content>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà cung cấp:" />
+                  <TextField fx:id="txtMaNhaCungCap" />
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TableView fx:id="tvDsNhaCungCap" prefHeight="445.0" prefWidth="980.0">
+         <columns>
+            <TableColumn fx:id="tcMaNCC" prefWidth="123.0" text="Mã nhà cung cấp" />
+            <TableColumn fx:id="tcTenNCC" prefWidth="270.0" text="Tên nhà cung cấp" />
+            <TableColumn fx:id="tcDiaChi" prefWidth="228.0" text="Địa chỉ" />
+            <TableColumn fx:id="tcSDT" prefWidth="158.0" text="Số điện thoại" />
+            <TableColumn fx:id="tcEmail" prefWidth="199.0" text="Email" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

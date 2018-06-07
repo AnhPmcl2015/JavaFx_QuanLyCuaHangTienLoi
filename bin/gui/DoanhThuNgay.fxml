@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoanhThuNgayController">
+   <children>
+      <VBox prefHeight="425.0" prefWidth="300.0" spacing="15.0" style="-fx-border-color: #00CCFF;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="450.0" style="-fx-background-color: #00CCFF;">
+               <children>
+                  <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0" text="THU NHẬP">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="tvThuNhap" prefHeight="256.0" prefWidth="448.0">
+              <columns>
+                <TableColumn fx:id="tcMaHoaDon" prefWidth="75.0" text="Mã hóa đơn" />
+                <TableColumn fx:id="tcThanhTien" prefWidth="75.0" text="Thành tiền" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="448.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng thu:" wrappingWidth="99.1650390625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtTongThu" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane prefHeight="200.0" prefWidth="3.0" style="-fx-background-color: #dddddd;">
+         <HBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </HBox.margin>
+      </Pane>
+      <VBox prefHeight="425.0" prefWidth="300.0" spacing="15.0" style="-fx-border-color: #00CCFF;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="450.0" style="-fx-background-color: #00CCFF;">
+               <children>
+                  <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0" text="CHI TIÊU">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="tvChiTieu" prefHeight="256.0" prefWidth="448.0">
+               <columns>
+                  <TableColumn fx:id="tcMaNhapHang" prefWidth="75.0" text="Mã nhập hàng" />
+                  <TableColumn fx:id="tcChiPhi" prefWidth="75.0" text="Chi phí" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="448.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng chi:" wrappingWidth="99.1650390625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtTongChi" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane prefHeight="200.0" prefWidth="3.0" style="-fx-background-color: #dddddd;">
+         <HBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </HBox.margin>
+      </Pane>
+      <VBox alignment="CENTER_RIGHT" prefHeight="425.0" prefWidth="163.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doanh thu:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="163.0" spacing="5.0">
+               <children>
+                  <Text fx:id="txtDoanhThu" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DoanhThuThangController">
+   <children>
+      <VBox prefHeight="425.0" prefWidth="300.0" spacing="10.0" style="-fx-border-color: #00CCFF;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="450.0" style="-fx-background-color: #00CCFF;">
+               <children>
+                  <Text fill="#fafafa" strokeType="OUTSIDE" strokeWidth="0.0" text="THỐNG KÊ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <TableView fx:id="TvThongKe" prefHeight="250.0" prefWidth="298.0">
+               <columns>
+                  <TableColumn fx:id="tcNgay" prefWidth="75.0" text="Ngày" />
+                  <TableColumn fx:id="tcIn" prefWidth="75.0" text="in" />
+                  <TableColumn fx:id="tcOut" prefWidth="75.0" text="out" />
+                  <TableColumn fx:id="tcRev" prefWidth="75.0" text="rev" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="298.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng thu:" wrappingWidth="99.1650390625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtTongThu" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="30000">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="298.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng chi:" wrappingWidth="99.1650390625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtTongChi" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="30000">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="298.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doanh thu:" wrappingWidth="99.1650390625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txtDoanhThu" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="30000">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane prefHeight="200.0" prefWidth="3.0" style="-fx-background-color: #dddddd;">
+         <HBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </HBox.margin>
+      </Pane>
+      <LineChart fx:id="lineChart" prefHeight="425.0" prefWidth="630.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</HBox>

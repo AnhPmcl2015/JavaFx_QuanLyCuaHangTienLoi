@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BaoCaoNhapHangController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Báo cáo nhập xuất">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TitledPane collapsible="false" prefHeight="73.0" prefWidth="980.0" text="Tìm kiếm" wrapText="true">
+         <content>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sản phẩm:" />
+                  <ComboBox fx:id="cmbMaSp" prefHeight="25.0" prefWidth="127.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Báo cáo theo" />
+                  <ComboBox fx:id="cmbLuaChon" prefHeight="25.0" prefWidth="87.0" />
+                  <DatePicker fx:id="dtp" prefHeight="25.0" prefWidth="157.0" />
+                  <Button fx:id="btn" mnemonicParsing="false" prefWidth="100.0" text="Xuất" />
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <HBox fx:id="hbox" prefHeight="425.0" prefWidth="980.0" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="1000.0" spacing="15.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChiTietHoaDonController">
+   <children>
+      <TitledPane collapsible="false" prefHeight="67.0" prefWidth="980.0" text="Thông tin hóa đơn" wrapText="true">
+         <content>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã hóa đơn:" />
+                  <Text fx:id="txtMaHoaDon" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân viên:">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="txtNhanVien" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Hai Nguyen" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng cộng:">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="txtTongCong" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="50000" />
+                  <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="VND" />
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TableView fx:id="tbHoaDon" prefHeight="449.0" prefWidth="980.0">
+         <columns>
+            <TableColumn fx:id="tcBarCode" prefWidth="158.0" text="Barcode" />
+            <TableColumn fx:id="tcTenSanPham" prefWidth="331.0" text="Tên sản phẩm" />
+            <TableColumn fx:id="tcDVT" prefWidth="86.0" text="ĐVT" />
+            <TableColumn fx:id="tcGia" prefWidth="135.0" text="Giá" />
+            <TableColumn fx:id="tcSoLuong" prefWidth="107.0" text="Số lượng" />
+            <TableColumn fx:id="tcThanhTien" prefWidth="162.0" text="Thành tiền" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

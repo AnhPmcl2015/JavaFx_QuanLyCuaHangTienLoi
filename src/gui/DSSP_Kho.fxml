@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DSSP_KhoController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh sách sản phẩm trong kho">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TitledPane collapsible="false" prefHeight="67.0" prefWidth="980.0" text="Tìm kiếm" wrapText="true">
+         <content>
+            <AnchorPane prefHeight="15.0" prefWidth="978.0">
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+               <children>
+                  <Text layoutX="41.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm theo:" AnchorPane.leftAnchor="41.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="cbbTimKiemTheo" layoutX="163.0" layoutY="9.0" prefHeight="25.0" prefWidth="148.0" visibleRowCount="3" AnchorPane.leftAnchor="145.0" />
+                  <TextField fx:id="txtMaSp" disable="true" layoutX="305.0" layoutY="9.0" visible="false" />
+                  <Button fx:id="btnXuatSanPham" layoutX="840.0" layoutY="8.0" mnemonicParsing="false" text="Xuất sản phẩm" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TableView fx:id="tbDSSPKho" prefHeight="445.0" prefWidth="980.0">
+        <columns>
+          <TableColumn fx:id="tcMaSp" prefWidth="139.0" text="Mã SP" />
+          <TableColumn fx:id="tcTenSp" prefWidth="275.0" text="Tên Sp" />
+            <TableColumn fx:id="tcSoLuongTrongKho" prefWidth="129.0" text="Số lượng trong kho" />
+            <TableColumn fx:id="tcSoLuongDangBan" prefWidth="150.0" text="Số lượng đang bán" />
+            <TableColumn fx:id="tcHinhAnh" prefWidth="286.0" text="Hình ảnh" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

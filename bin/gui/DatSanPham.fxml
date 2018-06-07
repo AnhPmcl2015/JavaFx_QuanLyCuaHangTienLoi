@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bus.PayBillController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Đặt hàng">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="535.0" prefWidth="980.0">
+         <children>
+            <VBox prefHeight="517.0" prefWidth="677.0">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <children>
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="677.0" spacing="15.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm theo:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="cmbTimKiem" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField fx:id="txtTimKiem" prefHeight="25.0" prefWidth="133.0" />
+                        <Text fx:id="txtDkTimKiem" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="( &lt; số lượng)" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tvThongTinSP" prefHeight="473.0" prefWidth="677.0">
+                    <columns>
+                      <TableColumn fx:id="tcMaSp" prefWidth="119.0" text="Mã SP" />
+                      <TableColumn fx:id="tcTenSp" prefWidth="180.0" text="Tên SP" />
+                        <TableColumn fx:id="tcSoLuong" prefWidth="115.0" text="Số lượng" />
+                        <TableColumn fx:id="tcNhaCungCap" prefWidth="262.0" text="Nhà cung cấp" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="3.0" style="-fx-background-color: #dddddd;" />
+            <VBox prefHeight="517.0" prefWidth="290.0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <children>
+                  <TreeTableView fx:id="ttvSpDuocChon" prefHeight="454.0" prefWidth="290.0">
+                    <columns>
+                      <TreeTableColumn fx:id="tcTenSpDuocChon" prefWidth="211.0" />
+                      <TreeTableColumn fx:id="tcSoLuongSpDuocChon" prefWidth="77.0" text="Số lượng" />
+                    </columns>
+                  </TreeTableView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="290.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btnHuy" mnemonicParsing="false" prefWidth="100.0" text="Hủy">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnDongY" mnemonicParsing="false" prefWidth="100.0" text="Đồng ý">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

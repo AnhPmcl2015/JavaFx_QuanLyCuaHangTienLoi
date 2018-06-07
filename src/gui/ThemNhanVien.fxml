@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ThemNhanVienController">
+   <children>
+      <HBox prefHeight="30.0" prefWidth="980.0" style="-fx-background-color: #00CCFF;">
+         <children>
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" text="Thêm nhân viên">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox prefHeight="510.0" prefWidth="980.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="484.0" prefWidth="281.0">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="254.0">
+                     <children>
+                        <ImageView fx:id="imgHinhAnh" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/noImage.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgChonHinhAnh" fitHeight="30.0" fitWidth="30.0" layoutX="157.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/camera.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <GridPane prefHeight="273.0" prefWidth="281.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="97.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="184.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên:">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CMND:" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại:" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính:" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tài khoản:" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu:" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ:" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtTenNhanVien" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtCMND" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtSDT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtTaiKhoan" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="txtMatKhau" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="3.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <TextField fx:id="txtNgay" editable="false" prefHeight="25.0" prefWidth="30.0">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                              <TextField fx:id="txtThang" editable="false" prefHeight="25.0" prefWidth="30.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="/" />
+                              <TextField fx:id="txtNam" editable="false" prefHeight="25.0" prefWidth="41.0" />
+                              <DatePicker fx:id="dtpNgaySinh" editable="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="20.0" />
+                           </children>
+                        </HBox>
+                        <ComboBox fx:id="cmbGioiTinh" prefHeight="25.0" prefWidth="183.0" visibleRowCount="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="cmbChucVu" prefHeight="25.0" prefWidth="182.0" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="281.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btnXoaThongTin" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Xóa thông tin">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnDongY" mnemonicParsing="false" prefWidth="120.0" text="Đồng ý">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </VBox>
+            <Pane prefHeight="484.0" prefWidth="3.0" style="-fx-background-color: #dddddd;" />
+            <TableView fx:id="tvThemNhanVien" prefHeight="495.0" prefWidth="687.0">
+              <columns>
+                <TableColumn fx:id="tcMaNV" prefWidth="70.0" text="Mã NV" />
+                <TableColumn fx:id="tcTenNV" prefWidth="222.0" text="Tên NV" />
+                  <TableColumn fx:id="tcGioiTinh" prefWidth="89.0" text="Giới tính" />
+                  <TableColumn fx:id="tcNgaySinh" prefWidth="127.0" text="Ngày sinh" />
+                  <TableColumn fx:id="tcChucVu" prefWidth="178.0" text="Chức vụ" />
+              </columns>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

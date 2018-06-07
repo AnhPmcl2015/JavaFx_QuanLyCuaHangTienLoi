@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="700.0" maxWidth="1350.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManHinhChinhController">
+   <center>
+      <TabPane fx:id="tab" prefHeight="640.0" prefWidth="1015.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="3.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TabPane>
+   </center>
+   <left>
+      <HBox prefHeight="660.0" prefWidth="295.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="630.0" prefWidth="270.0" spacing="3.0">
+               <children>
+                  <TitledPane collapsible="false" prefHeight="114.0" prefWidth="250.0" text="Dịch vụ">
+                     <content>
+                        <VBox prefHeight="81.0" prefWidth="248.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="238.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/ds_sanpham.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnDanhSachSanPham_DichVu" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Danh sách sản phẩm">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="238.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="35.0" prefWidth="238.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/hoadon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnHoaDon_DichVu" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Hóa đơn thanh toán">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="161.0" prefWidth="250.0" text="Quản lý kho">
+                     <content>
+                        <VBox prefHeight="133.0" prefWidth="248.0">
+                           <children>
+                              <HBox prefHeight="40.0" prefWidth="170.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/ds_sanpham.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnDanhSachSanPham_QuanLyKho" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Danh sách sản phẩm">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="238.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="40.0" prefWidth="170.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/dathang.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnDatHang_QuanLyKho" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Đặt hàng">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="238.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/nhaphang.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnNhapHang_QuanLyKho" mnemonicParsing="false" prefHeight="35.0" prefWidth="182.0" style="-fx-background-color: transparent;" text="Nhập hàng">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="2.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="114.0" prefWidth="250.0" text="Nhân viên">
+                     <content>
+                        <VBox prefHeight="101.0" prefWidth="248.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/nhanvien.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnDanhSach_NhanVien" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Danh sách nhân viên">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="3.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/them_nv.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Button fx:id="btnThemNhanVien" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Thêm nhân viên">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="114.0" prefWidth="250.0" text="Báo cáo thu chi">
+                     <content>
+                        <VBox prefHeight="101.0" prefWidth="248.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/doanhthu.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnBaoCaoDoanhThu" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Doanh thu">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="3.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/nhapxuat.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Button fx:id="btnBaoCaoNhapXuatHang" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Nhập xuất hàng">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane collapsible="false" prefHeight="114.0" prefWidth="250.0" text="Tìm kiếm">
+                     <content>
+                        <VBox prefHeight="101.0" prefWidth="248.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/ds_hoadon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnDanhSachHoaDon" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Danh sách hóa đơn">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane prefHeight="2.0" prefWidth="3.0" style="-fx-background-color: #DDDDDD;" />
+                              <HBox prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/ds_ncc.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Button fx:id="btnDSNhaCungCap" alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Danh sách nhà cung cấp">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" top="2.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+               </children>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </VBox>
+            <Pane prefHeight="630.0" prefWidth="3.0" style="-fx-background-color: #DDDDDD;" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" top="15.0" />
+         </padding>
+      </HBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="1350.0" spacing="15.0" style="-fx-background-color: #00CCFF;">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày:" />
+            <Text fx:id="txtNgay" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="26/12/1997" wrappingWidth="101.1015625" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhân viên:" />
+            <Text fx:id="txtTenNhanVien" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Phan Thế Anh" wrappingWidth="103.658203125" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
